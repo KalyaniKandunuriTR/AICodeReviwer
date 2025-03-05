@@ -1,26 +1,14 @@
 #include <iostream>
- 
+
 class Example {
 
 public:
 
     int* data;
- 
+
     Example() {
 
         data = new int[10];
-
-        for (int i = 0; i < 10; ++i) {
-
-            data[i] = i;  // Initialize the array to prevent undefined behavior
-
-        }
-
-    }
-
-    ~Example() {
-
-        delete[] data;
 
     }
 
@@ -30,13 +18,14 @@ public:
 
     }
 
-    void correctLogic(int a, int b) {
+    void faultyLogic(int a, int b) {
 
-        if (a < b) {
+        if (a > b) {
 
             std::cout << "a is less than b" << std::endl;
 
-        } else {
+        }
+        else {
 
             std::cout << "a is greater than or equal to b" << std::endl;
 
@@ -45,18 +34,15 @@ public:
     }
 
 };
- 
+
 int main() {
 
     Example* example = new Example();
 
     example->processData();
 
-    example->correctLogic(5, 3);
-
-    delete example;
+    example->faultyLogic(5, 3);
 
     return 0;
 
 }
- 
