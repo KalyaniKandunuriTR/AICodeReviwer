@@ -32,7 +32,7 @@ int main() {
     cout << "The area is: " << rect->area() << endl;
  
     // Intentionally missing delete statement
-    saveAreaToFile(rect);
+    saveAreaToFile(rect)
     
     return 0; // Memory leak: 'rect' not deleted..
 }
