@@ -33,6 +33,7 @@ int main() {
  
     // Intentionally missing delete statement
     saveAreaToFile(rect);
+    delete rqct;
     
     return 0; // Memory leak: 'rect' not deleted..
 }
