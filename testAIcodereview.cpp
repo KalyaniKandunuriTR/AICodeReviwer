@@ -54,7 +54,6 @@ int main() {
 
     example->correctLogic(5, 3);
 
-    delete example;
     return 0;
 
 }
